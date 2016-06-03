@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.medisolv.PriscriptionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorBackground">
+
+        <ImageView
+            android:id="@+id/my_toolbarImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_3"/>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescription"
+        android:id="@+id/prescription"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_marginLeft="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/patiendId"
+        android:id="@+id/prescriptionPatientId"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
+        android:layout_below="@+id/prescription"
+        android:layout_alignLeft="@+id/prescription"
+        android:layout_alignStart="@+id/prescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Id from DB "
+        android:id="@+id/prescriptionPatientIdValue"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:layout_alignTop="@+id/prescriptionPatientId"
+        android:layout_toRightOf="@+id/prescriptionPatientId"
+        android:layout_toEndOf="@+id/prescriptionPatientId" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:id="@+id/prescriptionHomeButton"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/first"
+        android:id="@+id/prescriptionFirstButton"
+        android:layout_alignBottom="@+id/prescriptionHomeButton"
+        android:layout_toRightOf="@+id/prescriptionHomeButton"
+        android:layout_toEndOf="@+id/prescriptionHomeButton"
+        android:textAllCaps="false"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:id="@+id/prescriptionNextButton"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/prescriptionFirstButton"
+        android:layout_toRightOf="@+id/prescriptionFirstButton"
+        android:layout_toEndOf="@+id/prescriptionFirstButton" />
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/last"
+        android:id="@+id/prescriptionLastButton"
+
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/prescriptionNextButton"
+        android:layout_alignRight="@+id/prescriptionPatientIdValue"
+        android:layout_alignEnd="@+id/prescriptionPatientIdValue" />
+
+
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/drug1"
+        android:id="@+id/drug1"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/prescriptionPatientId"
+        android:layout_alignRight="@+id/prescriptionFirstButton"
+        android:layout_alignEnd="@+id/prescriptionFirstButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor"
+        android:id="@+id/doctorButton1"
+        android:textAllCaps="false"
+        android:layout_alignTop="@+id/drug1"
+        android:layout_toRightOf="@+id/drug1"
+        android:layout_toEndOf="@+id/drug1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:id="@+id/dateButton1"
+        android:textAllCaps="false"
+        android:layout_alignTop="@+id/doctorButton1"
+        android:layout_toRightOf="@+id/doctorButton1"
+        android:layout_toEndOf="@+id/doctorButton1" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/drug2"
+        android:id="@+id/drug2"
+        android:textAllCaps="false"
+        android:layout_below="@+id/drug1"
+        android:layout_alignLeft="@+id/drug1"
+        android:layout_alignStart="@+id/drug1"
+        android:layout_alignRight="@+id/drug1"
+        android:layout_alignEnd="@+id/drug1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor"
+        android:id="@+id/doctorButton2"
+        android:textAllCaps="false"
+        android:layout_above="@+id/drug3"
+        android:layout_toRightOf="@+id/drug2"
+        android:layout_toEndOf="@+id/drug2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:id="@+id/dateButton2"
+        android:textAllCaps="false"
+        android:layout_above="@+id/dateButton3"
+        android:layout_alignRight="@+id/dateButton3"
+        android:layout_alignEnd="@+id/dateButton3" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="@string/drug3"
+        android:id="@+id/drug3"
+        android:textAllCaps="false"
+        android:layout_below="@+id/drug2"
+        android:layout_alignLeft="@+id/drug2"
+        android:layout_alignStart="@+id/drug2"
+        android:layout_alignRight="@+id/drug2"
+        android:layout_alignEnd="@+id/drug2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/doctor"
+        android:id="@+id/doctorButton3"
+        android:textAllCaps="false"
+        android:layout_alignTop="@+id/drug3"
+        android:layout_alignLeft="@+id/doctorButton2"
+        android:layout_alignStart="@+id/doctorButton2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:id="@+id/dateButton3"
+        android:textAllCaps="false"
+        android:layout_below="@+id/doctorButton2"
+        android:layout_alignLeft="@+id/dateButton1"
+        android:layout_alignStart="@+id/dateButton1" />
+</RelativeLayout>

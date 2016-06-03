@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.medisolv.BuyMedicinesActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorBackground">
+        <ImageView
+            android:id="@+id/my_toolbarImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_3"/>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome  Mr/Mrs. "
+        android:id="@+id/welcometextview"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient ID : "
+        android:id="@+id/adddependentpatientid"
+        android:layout_below="@+id/welcometextview"
+        android:layout_alignLeft="@+id/welcometextview"
+        android:layout_alignStart="@+id/welcometextview"
+        android:layout_marginTop="28dp"
+        android:textSize="20dp"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;ID from DB>"
+        android:id="@+id/adddependentidfromdb"
+        android:layout_alignBottom="@+id/adddependentpatientid"
+        android:layout_toRightOf="@+id/adddependentpatientid"
+        android:layout_toEndOf="@+id/adddependentpatientid"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Dependent"
+        android:textAllCaps="false"
+        android:id="@+id/adddependentbutton"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/adddependentpatientid"
+        android:layout_alignStart="@+id/adddependentpatientid"
+        android:layout_alignRight="@+id/adddependentidfromdb"
+        android:layout_alignEnd="@+id/adddependentidfromdb" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already a registered user"
+        android:id="@+id/adddependentreguser"
+        android:textSize="15dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/adddependentbutton"
+        android:layout_alignRight="@+id/welcometextview"
+        android:layout_alignEnd="@+id/welcometextview" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Dependent"
+        android:textAllCaps="false"
+        android:id="@+id/registerdependentbutton"
+        android:layout_below="@+id/adddependentreguser"
+        android:layout_alignLeft="@+id/adddependentbutton"
+        android:layout_alignStart="@+id/adddependentbutton"
+        android:layout_marginTop="60dp"
+        android:layout_alignRight="@+id/adddependentbutton"
+        android:layout_alignEnd="@+id/adddependentbutton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New user"
+        android:id="@+id/adddependentnewuser"
+        android:layout_below="@+id/registerdependentbutton"
+        android:layout_alignLeft="@+id/adddependentreguser"
+        android:layout_alignStart="@+id/adddependentreguser"
+        android:textSize="15dp"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textAllCaps="false"
+        android:id="@+id/dependenthomebutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/adddependentnewuser"
+        android:layout_alignStart="@+id/adddependentnewuser" />
+
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Medisolv</string>
+    <string name="splashText">Your Medical Partner!</string>
+    <string name="login">Login</string>
+    <string name="register">Sign Up</string>
+    <string name="regUser">Already a registered user</string>
+    <string name="newUser">New User?</string>
+    <string name="star">*</string>
+    <string name="fn">First Name *</string>
+    <string name="ln">Last Name *</string>
+    <string name="mobile">Mobile # *</string>
+    <string name="email">E-mail</string>
+    <string name="dob">DOB (DD-MMM-YYYY) *</string>
+    <string name="regType">Registration type</string>
+    <string name="spl">Specialisation *</string>
+    <string name="license">License # *</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="spinner1_array">
+        <item>Mr.</item>
+        <item>Ms.</item>
+        <item>Mrs.</item>
+    </string-array>
+    <string-array name="gender_array">
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+    <string-array name="regType_array">
+        <item>Registration type</item>
+        <item>Doctor</item>
+        <item>Patient</item>
+        <item>Pharma</item>
+    </string-array>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="forgot_patient_id">Forgot Patient ID?</string>
+    <string name="welcome">Welcome</string>
+    <string name="back">Back</string>
+    <string name="home">Home</string>
+
+    <string name="reportsScans">Reports / Scans</string>
+    <string name="first">First</string>
+    <string name="next">Next</string>
+    <string name="last">Last</string>
+    <string name="report1">Report1</string>
+    <string name="report2">Report2</string>
+    <string name="report3">Report3</string>
+    <string name="view">View</string>
+
+    <string name="viewReportsScans">Reports / Scans View</string>
+    <string name="patiendId">Patient ID :</string>
+    <string name="share">Share</string>
+
+    <string name="shareReportsScans">Reports / Scans Share</string>
+    <string name="shareDoctorId">Enter Doctor ID :</string>
+    <string name="comments">Comments :</string>
+
+    <string name="prescription">Prescription</string>
+    <string name="doctor">Doctor</string>
+    <string name="date">Date</string>
+    <string name="drug1">Drug 1</string>
+    <string name="drug2">Drug 2</string>
+    <string name="drug3">Drug 3</string>
+
+    <string name="prescriptionDetail">Prescription Detail</string>
+    <string name="buy">Buy</string>
+
+    <string name="buyMedicines">Buy Medicines</string>
+    <string name="vendor1">Vendor 1</string>
+    <string name="vendor2">Vendor 2</string>
+    <string name="vendor3">Vendor 3</string>
+    <string name="dependent3">dependents3</string>
+    <string name="del">details</string>
+    <string name="dependent2">dependent2</string>
+    <string name="dependent1">dependent1</string>
+    <string name="dependents">dependent</string>
+    <string name="dependentDetailComments">dependentDetailComments</string>
+    <string name="dependentDetailDoctor">dependentDetailDoctor</string>
+    <string name="dependentDetailScansOrReports">dependentDetailScansOrReports</string>
+    <string name="dependentDetailPrescriptionHistory">dependentDetailPrescriptionHistory</string>
+    <string name="dependentDetail">dependentDetail</string>
+    <string name="logout">logout</string>
+
+    <string name="consultDoctor">Consult a Doctor</string>
+    <string name="patientName">Patient Name :</string>
+    <string name="enterMobileNo">Please enter mobile No :</string>
+
+</resources>

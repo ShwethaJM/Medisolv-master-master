@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.medisolv.DependentRegisterActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
+        <ImageView
+            android:id="@+id/my_toolbarImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_3"/>
+    </android.support.v7.widget.Toolbar>
+
+    <Spinner android:id="@+id/dependentSpinner1"
+        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+    <EditText
+        android:id="@+id/dependentReg_fn"
+        android:layout_column="1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="@string/fn"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_toRightOf="@+id/dependentSpinner1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <EditText
+        android:id="@+id/dependentReg_ln"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="@string/ln"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/dependentReg_fn"
+        android:layout_alignRight="@+id/dependentReg_fn"
+        android:layout_alignEnd="@+id/dependentReg_fn"
+        android:layout_toRightOf="@+id/dependentSpinner1"
+        android:layout_toEndOf="@+id/dependentSpinner1" />
+    <EditText
+        android:id="@+id/dependentReg_mobile"
+        android:layout_column="1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="@string/mobile"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:inputType="phone"
+        android:layout_below="@+id/dependentReg_ln"
+        android:layout_alignLeft="@+id/dependentReg_ln"
+        android:layout_alignStart="@+id/dependentReg_ln"
+        android:layout_alignRight="@+id/dependentReg_ln"
+        android:layout_alignEnd="@+id/dependentReg_ln" />
+    />
+
+    <Spinner android:id="@+id/dependentGenderSpinner"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignTop="@+id/dependentReg_mobile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/dependentReg_mobile"
+        android:layout_toStartOf="@+id/dependentReg_mobile" />
+    <EditText
+        android:id="@+id/dependentReg_email"
+        android:layout_column="1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/dependentReg_mobile"
+        android:layout_alignRight="@+id/dependentReg_mobile"
+        android:layout_alignEnd="@+id/dependentReg_mobile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/dependentReg_dob"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="@string/dob"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:layout_gravity="center_vertical"
+        android:editable="false"
+        android:layout_below="@+id/dependentReg_email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/dependentReg_email"
+        android:layout_alignEnd="@+id/dependentReg_email" />
+
+    <Button
+        android:id="@+id/dependentReg_submit"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="registerOnSubmit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
