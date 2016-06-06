@@ -88,6 +88,7 @@
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:textColorHint="@color/colorPrimary"
         android:textColor="@color/colorPrimary"
         android:layout_below="@+id/reg_mobile"
@@ -110,7 +111,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/reg_email"
-        android:layout_alignEnd="@+id/reg_email" />
+        android:layout_alignEnd="@+id/reg_email"
+        />
     <Spinner android:id="@+id/regTypeSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -156,5 +158,6 @@
         android:onClick="registerOnSubmit"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
 

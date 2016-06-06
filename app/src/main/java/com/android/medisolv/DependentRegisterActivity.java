@@ -37,16 +37,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
 public class DependentRegisterActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener{
 
     static EditText dob;
-    static SimpleDateFormat dateFormatter;
+    static SimpleDateFormat dateFormatter,changeDateFormatter;
 
     EditText firstName;
     EditText lastName;
@@ -107,23 +109,41 @@ public class DependentRegisterActivity extends ActionBarActivity implements Adap
 
                 String salute = spinner.getSelectedItem().toString();
 
-                if(enteredFirstName.equals("") || enteredLastName.equals("") ||enteredEmail.equals("") || enteredMobile.equals("") || selectedGender.equals("") || enteredDob.equals("")|| salute.equals("")){
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+                String changedFormatDob="";
+
+                try {
+                    Date dobDate = dateFormatter.parse(enteredDob);
+                    changeDateFormatter = new SimpleDateFormat("yyyy/mm/dd",Locale.UK);
+                    changedFormatDob = changeDateFormatter.format(dobDate);
+                    System.out.println("Changed date: "+changedFormatDob);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                if(enteredFirstName.equals("") || enteredLastName.equals("") ||enteredEmail.equals("") || enteredMobile.equals("") || selectedGender.equals("") || changedFormatDob.equals("")|| salute.equals("")){
 
                     Toast.makeText(DependentRegisterActivity.this, "All fields are mandatory", Toast.LENGTH_LONG).show();
 
                     return;
 
                 }
-                if(enteredMobile.length()<10)
+                else if(enteredMobile.length()<10)
                 {
-                    Toast.makeText(getApplicationContext(), "Mobile Number should be 10 digits", Toast.LENGTH_LONG).show();
+                    Toast.makeText(DependentRegisterActivity.this, "Mobile Number should be 10 digits", Toast.LENGTH_LONG).show();
+                    return;
                 }
 
+                else if(enteredEmail.matches(emailPattern)== false){
+                    Toast.makeText(DependentRegisterActivity.this, "Please enter the valid Email Address", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 // request authentication with remote server4
-                DependentRegisterActivityAsyncTask asyncRequestObject = new DependentRegisterActivityAsyncTask();
-
-                asyncRequestObject.execute(serverUrl, salute, name, enteredMobile, enteredEmail,selectedGender,enteredDob);
-
+                else{
+                    DependentRegisterActivityAsyncTask asyncRequestObject = new DependentRegisterActivityAsyncTask();
+                    asyncRequestObject.execute(serverUrl, salute, name, enteredMobile, enteredEmail,selectedGender,enteredDob);
+                }
             }
         });
     }

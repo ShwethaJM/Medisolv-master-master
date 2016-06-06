@@ -213,9 +213,13 @@ public class LoginActivity extends ActionBarActivity {
 
                 }
                 System.out.println("Result: " + result);
-                String jsonResult = returnParsedJsonObject(result);
-                System.out.println("Resulted Value: " + jsonResult);
-                if (jsonResult.equals("")||patientID.equals("")) {
+                String jsonResult[] = new String[2];
+
+
+                jsonResult = returnParsedJsonObject(result);
+                System.out.println("Resulted Value: " + jsonResult[0] + " " + jsonResult[1]);
+                System.out.println("Registration Type:"+ jsonResult[1]);
+                if (jsonResult.equals("null")||jsonResult.equals("")||patientID.equals("")) {
 
                     Toast.makeText(LoginActivity.this, "Invalid mobile or id", Toast.LENGTH_LONG).show();
 
@@ -223,15 +227,31 @@ public class LoginActivity extends ActionBarActivity {
 
                 } else {
 
-                    Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+                    if(jsonResult[1].equals("Doctor")) {
+                        System.out.println("Going to Doctor Screen");
+                        Intent intent = new Intent(LoginActivity.this, WelcomdoctorActivity.class);
 
-                    intent.putExtra("name", jsonResult);
+                        intent.putExtra("name", jsonResult[0]);
 
-                    intent.putExtra("id",patientID);
+                        intent.putExtra("id", patientID);
 
-                    intent.putExtra("MESSAGE", "You have been successfully login");
+                        intent.putExtra("MESSAGE", "You have been successfully login");
 
-                    startActivity(intent);
+                        startActivity(intent);
+
+                    }else{
+                        System.out.println("Going to Patient Screen");
+                        Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+
+                        intent.putExtra("name", jsonResult[0]);
+
+                        intent.putExtra("id", patientID);
+
+                        intent.putExtra("MESSAGE", "You have been successfully login");
+
+                        startActivity(intent);
+
+                    }
 
                 }
             }catch(Exception e){
@@ -272,11 +292,11 @@ public class LoginActivity extends ActionBarActivity {
     }
 
 
-    private String returnParsedJsonObject(String result){
+    private String[] returnParsedJsonObject(String result){
 
         JSONObject resultObject = null;
 
-        String returnedResult = "";
+        String returnedResult[] = new String[2];
 
         try {
 
@@ -284,8 +304,9 @@ public class LoginActivity extends ActionBarActivity {
 
             //returnedResult = resultObject.getInt("success");
             //returnedResult = resultObject.optString("name");
-            returnedResult = resultObject.getString("name");
+            returnedResult[0] = resultObject.getString("name");
             patientID = resultObject.getString("id");
+            returnedResult[1] = resultObject.getString("regType");
         } catch (JSONException e) {
 
             e.printStackTrace();

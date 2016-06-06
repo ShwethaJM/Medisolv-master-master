@@ -61,8 +61,10 @@ import java.io.InputStream;
 
 import java.io.InputStreamReader;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -74,7 +76,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
 
     static EditText dob;
 
-    static SimpleDateFormat dateFormatter;
+    static SimpleDateFormat dateFormatter,changeDateFormatter;
 
     EditText firstName;
     EditText lastName;
@@ -153,7 +155,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
 
                 String name = enteredFirstName + enteredLastName;
 
-                String enteredEmail = email.getText().toString();
+                String enteredEmail = email.getText().toString().trim();
 
                 String enteredMobile = mobile.getText().toString();
 
@@ -169,32 +171,48 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
 
                 String salute = spinner.getSelectedItem().toString();
 
-                if(enteredFirstName.equals("") || enteredLastName.equals("") ||enteredEmail.equals("") || enteredMobile.equals("") || selectedGender.equals("") || selectedRegType.equals("") || enteredDob.equals("")|| salute.equals("") ||enteredEmail.equals("")){
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+                String changedFormatDob="";
+
+                try {
+                    Date dobDate = dateFormatter.parse(enteredDob);
+                    changeDateFormatter = new SimpleDateFormat("yyyy/mm/dd",Locale.UK);
+                    changedFormatDob = changeDateFormatter.format(dobDate);
+                    System.out.println("Changed date: "+changedFormatDob);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                if(enteredFirstName.equals("") || enteredLastName.equals("") ||enteredEmail.equals("") || enteredMobile.equals("") || selectedGender.equals("") || selectedRegType.equals("") || changedFormatDob.equals("")|| salute.equals("") ||enteredEmail.equals("")){
 
                     Toast.makeText(RegistrationActivity.this, "All fields are mandatory", Toast.LENGTH_LONG).show();
 
                     return;
 
-                }
-
-                if(selectedRegType.equals("Doctor") && (enteredLicense.equals("") || enteredSpecialization.equals(""))){
+                }else if(selectedRegType.equals("Doctor") && (enteredLicense.equals("") || enteredSpecialization.equals(""))){
 
                     Toast.makeText(RegistrationActivity.this, "All fields are mandatory", Toast.LENGTH_LONG).show();
 
                     return;
 
-                }
-
-                if(enteredMobile.length()<10)
+                }else if(enteredMobile.length()<10)
                 {
-                    Toast.makeText(getApplicationContext(), "Mobile Number should be 10 digits", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegistrationActivity.this, "Mobile Number should be 10 digits", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                else if(enteredEmail.matches(emailPattern)== false){
+                    System.out.println("Invalid Email");
+                    Toast.makeText(RegistrationActivity.this, "Please enter the valid Email Address", Toast.LENGTH_LONG).show();
+                    return;
                 }
 // request authentication with remote server4
+                else {
+                    RegistrationActivityAsyncTask asyncRequestObject = new RegistrationActivityAsyncTask();
 
-                RegistrationActivityAsyncTask asyncRequestObject = new RegistrationActivityAsyncTask();
-
-                asyncRequestObject.execute(serverUrl, salute, name, enteredMobile, enteredEmail,selectedGender,enteredDob,selectedRegType,enteredLicense,enteredSpecialization);
-
+                    asyncRequestObject.execute(serverUrl, salute, name, enteredMobile, enteredEmail, selectedGender, changedFormatDob, selectedRegType, enteredLicense, enteredSpecialization);
+                }
             }
 
         });
@@ -245,6 +263,8 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
             Calendar newCalender = Calendar.getInstance();
             newCalender.set(year,month,day);
             dob.setText(dateFormatter.format(newCalender.getTime()));
+            System.out.println("Previous Date: "+dateFormatter.format(newCalender.getTime()));
+
         }
 
 
@@ -305,6 +325,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
             HttpPost httpPost = new HttpPost(params[0]);
             System.out.println("params[0]: " + params[0]);
             String jsonResult = "";
+            System.out.println("params[9] Specialisation: "+params[9]);
 
             try {
 

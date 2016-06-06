@@ -94,7 +94,8 @@
         android:layout_alignRight="@+id/dependentReg_mobile"
         android:layout_alignEnd="@+id/dependentReg_mobile"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/dependentReg_dob"
@@ -110,7 +111,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/dependentReg_email"
-        android:layout_alignEnd="@+id/dependentReg_email" />
+        android:layout_alignEnd="@+id/dependentReg_email"
+        />
 
     <Button
         android:id="@+id/dependentReg_submit"

@@ -12,8 +12,7 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorBackground">
+        android:layout_marginTop="20dp">
         <ImageView
             android:id="@+id/my_toolbarImage"
             android:layout_width="wrap_content"
@@ -55,14 +54,13 @@
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
         android:id="@+id/idfromdbtextview"
-        android:layout_alignTop="@+id/doctoridtextView"
-        android:layout_toRightOf="@+id/doctoridtextView"
-        android:layout_toEndOf="@+id/doctoridtextView"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="15dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/abc_input_method_navigation_guard"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/doctoridtextView"
+        android:layout_toRightOf="@+id/doctoridtextView"
+        android:layout_toEndOf="@+id/doctoridtextView" />
 
     <Button
         android:layout_width="wrap_content"
@@ -82,12 +80,13 @@
         android:text="Back"
         android:textAllCaps="false"
         android:id="@+id/consultpagebackbutton"
-        android:layout_alignBottom="@+id/consultpatienthomebutton"
-        android:layout_alignRight="@+id/idfromdbtextview"
-        android:layout_alignEnd="@+id/idfromdbtextview" />
+        android:layout_alignTop="@+id/consultpatienthomebutton"
+        android:layout_toRightOf="@+id/consultpatienttextview"
+        android:layout_toEndOf="@+id/consultpatienttextview" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/consultpatientid"
         android:layout_below="@+id/doctoridtextView"
@@ -97,10 +96,12 @@
         android:layout_alignEnd="@+id/consultpagebackbutton"
         android:layout_marginTop="20dp"
         android:hint="Patient ID"
-        android:textColor="@color/abc_input_method_navigation_guard" />
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:inputType="number" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/consultpatientname"
         android:layout_centerVertical="true"
@@ -109,6 +110,7 @@
         android:layout_alignRight="@+id/consultpatientid"
         android:layout_alignEnd="@+id/consultpatientid"
         android:textSize="20dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:hint="Patient Name" />
 
@@ -121,7 +123,7 @@
         android:layout_below="@+id/consultpatientname"
         android:layout_alignLeft="@+id/consultpatientname"
         android:layout_alignStart="@+id/consultpatientname"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="50dp"
         android:layout_alignRight="@+id/consultpagebackbutton"
         android:layout_alignEnd="@+id/consultpagebackbutton"
         android:textColor="@color/colorPrimary" />

@@ -12,8 +12,8 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorBackground">
+        android:layout_marginTop="20dp"
+        >
         <ImageView
             android:id="@+id/my_toolbarImage"
             android:layout_width="wrap_content"
@@ -36,7 +36,19 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:textSize="20dp" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;ID from DB>"
+        android:id="@+id/name"
+        android:layout_toEndOf="@+id/welcomedr"
+        android:layout_alignTop="@+id/welcomedr"
+        android:layout_toRightOf="@+id/welcomedr"
+        android:layout_alignBottom="@+id/welcomedr"
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,17 +66,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
-        android:id="@+id/welcomedoctorid"
-        android:layout_toEndOf="@+id/welcomedr"
-        android:layout_alignTop="@+id/doctorid"
-        android:layout_toRightOf="@+id/doctorid"
-        android:layout_alignBottom="@+id/doctorid"
+        android:id="@+id/patientid"
         android:textSize="20dp"
         android:textColor="@color/abc_input_method_navigation_guard"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignTop="@+id/doctorid"
+        android:layout_toRightOf="@+id/doctorid"
+        android:layout_toEndOf="@+id/doctorid" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Consult a patient"
         android:textAllCaps="false"
@@ -73,8 +84,7 @@
         android:layout_alignLeft="@+id/doctorid"
         android:layout_alignStart="@+id/doctorid"
         android:layout_marginTop="20dp"
-        android:layout_alignRight="@+id/welcomedoctorid"
-        android:layout_alignEnd="@+id/welcomedoctorid" />
+ />
 
     <Button
         android:layout_width="wrap_content"

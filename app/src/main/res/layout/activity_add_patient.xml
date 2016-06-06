@@ -12,8 +12,7 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorBackground">
+        android:layout_marginTop="20dp">
         <ImageView
             android:id="@+id/my_toolbarImage"
             android:layout_width="wrap_content"
@@ -45,8 +44,8 @@
         android:layout_alignTop="@+id/doctorid_textView"
         android:layout_toRightOf="@+id/doctorid_textView"
         android:layout_toEndOf="@+id/doctorid_textView"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:textSize="20dp"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:textAppearance="?android:attr/textAppearanceMedium" />

@@ -35,6 +35,9 @@
             android:name=".WelcomeActivity"
             android:label="" />
         <activity
+            android:name=".WelcomdoctorActivity"
+            android:label="" />
+        <activity
             android:name=".ViewHistoryActivity"
             android:label="" />
         <activity
@@ -45,6 +48,16 @@
         <activity android:name=".PriscriptionActivity" />
         <activity android:name=".PrescriptionDetailActivity" />
         <activity android:name=".BuyMedicinesActivity" />
+        <activity android:name=".ConsultapatientActivity" />
+        <activity android:name=".ConsultDoctorActivity" />
+        <activity android:name=".ForgotPatientIDActivity" />
+        <activity android:name=".AddPatientActivity" />
+        <activity android:name=".AddScansActivity" />
+        <activity android:name=".AddMedicineActivity" />
+        <activity android:name=".PrescribeMedicineActivity" />
+        <activity android:name=".RetakeImageActivity" />
+        <activity android:name=".AddDependentActivity" />
+        <activity android:name=".RegistredDependentActivity" />
         <activity android:name=".LogoutActivity" />
         <activity android:name=".DependentRegisterActivity" />
         <activity android:name=".DependentsActivity" />

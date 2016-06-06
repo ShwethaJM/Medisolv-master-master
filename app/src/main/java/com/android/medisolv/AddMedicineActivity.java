@@ -8,12 +8,14 @@ import android.widget.Button;
 
 public class AddMedicineActivity extends AppCompatActivity implements View.OnClickListener {
     Button homebutton,backbutton;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medicine);
+
 
         homebutton=(Button)findViewById(R.id.addmedicinehomebutton);
         backbutton=(Button)findViewById(R.id.addmedicinebackbutton);

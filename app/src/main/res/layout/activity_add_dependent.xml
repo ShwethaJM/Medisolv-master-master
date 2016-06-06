@@ -12,8 +12,8 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorBackground">
+        android:layout_marginTop="20dp"
+        >
         <ImageView
             android:id="@+id/my_toolbarImage"
             android:layout_width="wrap_content"
