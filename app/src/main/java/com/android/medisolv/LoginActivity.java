@@ -19,6 +19,7 @@ import android.widget.Button;
 
 import android.widget.EditText;
 
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -89,6 +90,17 @@ public class LoginActivity extends ActionBarActivity {
         id = (EditText)findViewById(R.id.patientid);
 
         Button submit = (Button)findViewById(R.id.submit);
+
+        TextView forgotPatientId = (TextView)findViewById(R.id.forgotpatientid);
+
+        forgotPatientId.setOnClickListener( new View.OnClickListener(){
+            @Override
+
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,ForgotPatientIDActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //Button registerButton = (Button)findViewById(R.id.);
         Toast.makeText(LoginActivity.this, "Welcome, Enter Mobile number and Patient ID", Toast.LENGTH_LONG).show();

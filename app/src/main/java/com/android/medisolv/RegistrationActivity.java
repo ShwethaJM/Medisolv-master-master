@@ -351,7 +351,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
 
                 nameValuePairs.add(new BasicNameValuePair("license", params[8]));
 
-                nameValuePairs.add(new BasicNameValuePair("spcialization", params[9]));
+                nameValuePairs.add(new BasicNameValuePair("specialization", params[9]));
 
                 httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
