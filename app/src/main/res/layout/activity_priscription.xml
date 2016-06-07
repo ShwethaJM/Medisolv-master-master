@@ -66,38 +66,37 @@
         android:layout_height="wrap_content"
         android:text="@string/home"
         android:id="@+id/prescriptionHomeButton"
-        android:layout_marginLeft="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="26dp"
         android:textAllCaps="false"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/drug3"
+        android:layout_alignStart="@+id/drug3" />
 
     <Button
-        android:layout_width="60dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="@string/first"
         android:id="@+id/prescriptionFirstButton"
-        android:layout_alignBottom="@+id/prescriptionHomeButton"
-        android:layout_toRightOf="@+id/prescriptionHomeButton"
-        android:layout_toEndOf="@+id/prescriptionHomeButton"
         android:textAllCaps="false"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/prescriptionHomeButton"
+        android:layout_toLeftOf="@+id/prescriptionNextButton"
+        android:layout_toStartOf="@+id/prescriptionNextButton" />
 
     <Button
-        android:layout_width="60dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:id="@+id/prescriptionNextButton"
         android:textAllCaps="false"
         android:textStyle="bold"
         android:layout_alignTop="@+id/prescriptionFirstButton"
-        android:layout_toRightOf="@+id/prescriptionFirstButton"
-        android:layout_toEndOf="@+id/prescriptionFirstButton" />
+        android:layout_toLeftOf="@+id/prescriptionLastButton"
+        android:layout_toStartOf="@+id/prescriptionLastButton" />
 
     <Button
-        android:layout_width="60dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="@string/last"
         android:id="@+id/prescriptionLastButton"
@@ -105,8 +104,8 @@
         android:textAllCaps="false"
         android:textStyle="bold"
         android:layout_alignTop="@+id/prescriptionNextButton"
-        android:layout_alignRight="@+id/prescriptionPatientIdValue"
-        android:layout_alignEnd="@+id/prescriptionPatientIdValue" />
+        android:layout_alignRight="@+id/dateButton3"
+        android:layout_alignEnd="@+id/dateButton3" />
 
 
 
@@ -118,8 +117,7 @@
         android:textAllCaps="false"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/prescriptionPatientId"
-        android:layout_alignRight="@+id/prescriptionFirstButton"
-        android:layout_alignEnd="@+id/prescriptionFirstButton" />
+        android:layout_marginLeft="30dp" />
 
     <Button
         android:layout_width="wrap_content"

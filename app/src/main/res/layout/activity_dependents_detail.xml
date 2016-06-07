@@ -59,10 +59,11 @@
         android:paddingLeft="10dp"
         android:layout_above="@+id/dependentDetailPrescriptionHistoryButton"
         android:layout_toRightOf="@+id/dependentDetailPatientId"
-        android:layout_toEndOf="@+id/dependentDetailPatientId" />
+        android:layout_toEndOf="@+id/dependentDetailPatientId"
+        android:layout_marginLeft="5dp" />
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/dependentDetailPrescriptionHistory"
         android:id="@+id/dependentDetailPrescriptionHistoryButton"
@@ -70,10 +71,13 @@
         android:layout_alignLeft="@+id/dependentDetailPatientId"
         android:layout_alignStart="@+id/dependentDetailPatientId"
         android:textAllCaps="false"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@+id/my_toolbar"
+        android:layout_alignEnd="@+id/my_toolbar"
+        android:layout_marginRight="20dp" />
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/dependentDetailScansOrReports"
         android:id="@+id/dependentDetailReportsOrScansButton"
@@ -81,9 +85,11 @@
         android:layout_alignLeft="@+id/dependentDetailPrescriptionHistoryButton"
         android:layout_alignStart="@+id/dependentDetailPrescriptionHistoryButton"
         android:layout_marginTop="10dp"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_alignRight="@+id/dependentDetailPrescriptionHistoryButton"
+        android:layout_alignEnd="@+id/dependentDetailPrescriptionHistoryButton" />
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/dependentDetailDoctor"
         android:id="@+id/dependentDetailDoctorButton"
@@ -91,7 +97,9 @@
         android:layout_alignLeft="@+id/dependentDetailReportsOrScansButton"
         android:layout_alignStart="@+id/dependentDetailReportsOrScansButton"
         android:layout_marginTop="10dp"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_alignRight="@+id/dependentDetailReportsOrScansButton"
+        android:layout_alignEnd="@+id/dependentDetailReportsOrScansButton" />
 
     <Button
         android:layout_width="125dp"
@@ -118,7 +126,7 @@
         android:textStyle="bold"/>
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/dependentDetailComments"
         android:id="@+id/dependentDetailCommentsButton"
@@ -126,5 +134,7 @@
         android:layout_alignLeft="@+id/dependentDetailDoctorButton"
         android:layout_alignStart="@+id/dependentDetailDoctorButton"
         android:layout_marginTop="10dp"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_alignRight="@+id/dependentDetailBackButton"
+        android:layout_alignEnd="@+id/dependentDetailBackButton" />
 </RelativeLayout>

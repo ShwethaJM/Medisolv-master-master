@@ -96,8 +96,10 @@
         android:layout_alignEnd="@+id/consultpagebackbutton"
         android:layout_marginTop="20dp"
         android:hint="Patient ID"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:inputType="number" />
+        android:textColor="@color/colorPrimary"
+        android:inputType="number"
+        android:background="@drawable/broder_style"
+        android:textColorHint="@color/colorPrimary" />
 
     <EditText
         android:layout_width="0dp"
@@ -111,8 +113,10 @@
         android:layout_alignEnd="@+id/consultpatientid"
         android:textSize="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:hint="Patient Name" />
+        android:textColor="@color/colorPrimary"
+        android:hint="Patient Name"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/broder_style" />
 
     <Button
         android:layout_width="wrap_content"

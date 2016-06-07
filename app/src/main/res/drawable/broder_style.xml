@@ -3,7 +3,7 @@
     <!--Define the border color and the width-->
     <stroke
         android:color="@color/colorPrimary"
-        android:width="5dp"
+        android:width="3dp"
         />
     <padding android:bottom="10dp"
         android:left="10dp"

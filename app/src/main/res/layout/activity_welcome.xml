@@ -79,7 +79,7 @@
         android:text="Consult Doctor"
         android:textAllCaps="true"
         android:layout_marginTop="10dp"
-        android:layout_width="60dp" />
+        android:layout_width="329dp" />
 
     <Button
         android:layout_width="wrap_content"

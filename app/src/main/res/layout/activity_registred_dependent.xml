@@ -55,10 +55,10 @@
         android:id="@+id/databasedependentid"
         android:textSize="20dp"
         android:textColor="@color/abc_input_method_navigation_guard"
-        android:layout_alignTop="@+id/dependentpatientid"
+        android:layout_above="@+id/patientdependentid"
         android:layout_toRightOf="@+id/dependentpatientid"
         android:layout_toEndOf="@+id/dependentpatientid"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="5dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -68,11 +68,14 @@
         android:layout_alignLeft="@+id/dependentpatientid"
         android:layout_alignStart="@+id/dependentpatientid"
         android:layout_marginTop="40dp"
-        android:layout_alignRight="@+id/databasedependentid"
-        android:layout_alignEnd="@+id/databasedependentid"
-        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textColor="@color/colorPrimary"
         android:textSize="20dp"
-        android:hint="Dependent Patient ID" />
+        android:hint="Dependent Patient ID"
+        android:layout_alignRight="@+id/my_toolbar"
+        android:layout_alignEnd="@+id/my_toolbar"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/broder_style"
+        android:textColorHint="@color/colorPrimary" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -84,7 +87,8 @@
         android:layout_alignLeft="@+id/patientdependentid"
         android:layout_alignStart="@+id/patientdependentid"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/abc_input_method_navigation_guard" />
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -111,10 +115,12 @@
         android:layout_alignStart="@+id/patientdependentid"
         android:layout_marginTop="38dp"
         android:textSize="20dp"
-        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textColor="@color/colorPrimary"
         android:hint="OTP"
         android:layout_alignRight="@+id/alreayauser"
-        android:layout_alignEnd="@+id/alreayauser" />
+        android:layout_alignEnd="@+id/alreayauser"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/broder_style" />
 
     <Button
         android:layout_width="wrap_content"

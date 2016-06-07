@@ -53,13 +53,12 @@
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
         android:id="@+id/adddependentidfromdb"
-        android:layout_alignBottom="@+id/adddependentpatientid"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/adddependentpatientid"
         android:layout_toRightOf="@+id/adddependentpatientid"
         android:layout_toEndOf="@+id/adddependentpatientid"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:textSize="20dp" />
+        android:layout_marginLeft="5dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -67,11 +66,13 @@
         android:text="Add Dependent"
         android:textAllCaps="false"
         android:id="@+id/adddependentbutton"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/adddependentpatientid"
         android:layout_alignLeft="@+id/adddependentpatientid"
         android:layout_alignStart="@+id/adddependentpatientid"
-        android:layout_alignRight="@+id/adddependentidfromdb"
-        android:layout_alignEnd="@+id/adddependentidfromdb" />
+        android:layout_marginTop="30dp"
+        android:layout_alignRight="@+id/my_toolbar"
+        android:layout_alignEnd="@+id/my_toolbar"
+        android:layout_marginRight="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,7 +94,7 @@
         android:layout_below="@+id/adddependentreguser"
         android:layout_alignLeft="@+id/adddependentbutton"
         android:layout_alignStart="@+id/adddependentbutton"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_alignRight="@+id/adddependentbutton"
         android:layout_alignEnd="@+id/adddependentbutton" />
 
@@ -116,7 +117,10 @@
         android:id="@+id/dependenthomebutton"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/adddependentnewuser"
-        android:layout_alignStart="@+id/adddependentnewuser" />
+        android:layout_alignStart="@+id/adddependentnewuser"
+        android:layout_marginBottom="50dp"
+        android:layout_alignRight="@+id/adddependentreguser"
+        android:layout_alignEnd="@+id/adddependentreguser" />
 
 
 </RelativeLayout>

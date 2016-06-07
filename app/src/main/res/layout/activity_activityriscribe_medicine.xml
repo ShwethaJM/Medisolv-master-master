@@ -42,14 +42,13 @@
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
         android:id="@+id/databasedoctorid"
-        android:layout_alignTop="@+id/doctorid_textView"
-        android:layout_toRightOf="@+id/doctorid_textView"
-        android:layout_toEndOf="@+id/doctorid_textView"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
         android:textSize="20dp"
         android:textColor="@color/abc_input_method_navigation_guard"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_above="@+id/patientid_textview"
+        android:layout_toRightOf="@+id/patientid_textview"
+        android:layout_toEndOf="@+id/patientid_textview"
+        android:layout_marginLeft="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -83,9 +82,10 @@
         android:id="@+id/priscribemedicinetextview"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:textSize="20dp"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/patientid_textview"
         android:layout_alignLeft="@+id/patientid_textview"
-        android:layout_alignStart="@+id/patientid_textview" />
+        android:layout_alignStart="@+id/patientid_textview"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -105,8 +105,9 @@
         android:textAllCaps="false"
         android:id="@+id/prescribebackbutton"
         android:layout_alignTop="@+id/prescribehomebutton"
-        android:layout_alignRight="@+id/addmedicinebuttons"
-        android:layout_alignEnd="@+id/addmedicinebuttons" />
+        android:layout_alignRight="@+id/my_toolbar"
+        android:layout_alignEnd="@+id/my_toolbar"
+        android:layout_marginRight="30dp" />
 
     <AutoCompleteTextView
         android:layout_width="wrap_content"
@@ -116,9 +117,12 @@
         android:layout_below="@+id/priscribemedicinetextview"
         android:layout_alignLeft="@+id/priscribemedicinetextview"
         android:layout_alignStart="@+id/priscribemedicinetextview"
-        android:layout_alignRight="@+id/priscribemedicinetextview"
-        android:layout_alignEnd="@+id/priscribemedicinetextview"
-        android:hint="Medicine Name" />
+        android:hint="Medicine Name"
+        android:layout_alignRight="@+id/prescribebackbutton"
+        android:layout_alignEnd="@+id/prescribebackbutton"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/broder_style" />
 
     <Button
         android:layout_width="wrap_content"
@@ -126,12 +130,12 @@
         android:text="Add Medicine"
         android:textAllCaps="false"
         android:id="@+id/addmedicinebuttons"
-        android:layout_above="@+id/prescribehomebutton"
+        android:layout_below="@+id/medicinenameTextView"
         android:layout_alignLeft="@+id/medicinenameTextView"
         android:layout_alignStart="@+id/medicinenameTextView"
-        android:layout_marginBottom="50dp"
-        android:layout_alignRight="@+id/databasepatientid"
-        android:layout_alignEnd="@+id/databasepatientid" />
+        android:layout_alignRight="@+id/prescribebackbutton"
+        android:layout_alignEnd="@+id/prescribebackbutton"
+        android:layout_marginTop="20dp" />
 
 
 </RelativeLayout>

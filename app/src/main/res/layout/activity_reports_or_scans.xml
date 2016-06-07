@@ -59,10 +59,11 @@
         android:paddingLeft="10dp"
         android:layout_alignTop="@+id/reportPatientId"
         android:layout_toRightOf="@+id/reportPatientId"
-        android:layout_toEndOf="@+id/reportPatientId" />
+        android:layout_toEndOf="@+id/reportPatientId"
+        android:layout_marginLeft="5dp" />
 
     <Button
-        android:layout_width="62dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/home"
         android:id="@+id/reportHomeButton"
@@ -75,18 +76,19 @@
         android:textStyle="bold"/>
 
     <Button
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/first"
         android:id="@+id/firstButton"
-        android:layout_alignBottom="@+id/reportHomeButton"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/reportHomeButton"
         android:layout_toRightOf="@+id/reportHomeButton"
         android:layout_toEndOf="@+id/reportHomeButton"
-        android:textAllCaps="false"
-        android:textStyle="bold"/>
+        android:layout_marginLeft="5dp" />
 
     <Button
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:id="@+id/nextButton"
@@ -96,15 +98,16 @@
         android:textStyle="bold"/>
 
     <Button
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/last"
         android:id="@+id/lastButton"
-        android:layout_alignBottom="@+id/firstButton"
-        android:layout_toLeftOf="@+id/reportBackButton"
-        android:layout_toStartOf="@+id/reportBackButton"
         android:textAllCaps="false"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/nextButton"
+        android:layout_toRightOf="@+id/nextButton"
+        android:layout_toEndOf="@+id/nextButton"
+        android:layout_marginLeft="5dp" />
 
     <Button
         android:layout_width="65dp"

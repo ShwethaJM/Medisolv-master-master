@@ -42,14 +42,13 @@
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
         android:id="@+id/databasedoctorid"
-        android:layout_alignTop="@+id/doctorid_textView"
-        android:layout_toRightOf="@+id/doctorid_textView"
-        android:layout_toEndOf="@+id/doctorid_textView"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
         android:textSize="20dp"
         android:textColor="@color/abc_input_method_navigation_guard"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_above="@+id/patientid_textview"
+        android:layout_toRightOf="@+id/patientid_textview"
+        android:layout_toEndOf="@+id/patientid_textview"
+        android:layout_marginLeft="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,11 +80,12 @@
         android:layout_height="wrap_content"
         android:text="Add a Medicine"
         android:id="@+id/addamedicinetextview"
-        android:layout_centerVertical="true"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
+        android:layout_below="@+id/patientid_textview"
         android:layout_alignLeft="@+id/patientid_textview"
         android:layout_alignStart="@+id/patientid_textview"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:textSize="20dp" />
+        android:layout_marginTop="20dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -97,8 +97,9 @@
         android:layout_alignLeft="@+id/addamedicinetextview"
         android:layout_alignStart="@+id/addamedicinetextview"
         android:layout_marginTop="20dp"
-        android:layout_alignRight="@+id/databasepatientid"
-        android:layout_alignEnd="@+id/databasepatientid" />
+
+        android:layout_alignRight="@+id/addmedicinebackbutton"
+        android:layout_alignEnd="@+id/addmedicinebackbutton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -133,10 +134,9 @@
         android:textAllCaps="false"
         android:id="@+id/addmedicinehomebutton"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
+        android:layout_alignLeft="@+id/commentsbutton"
+        android:layout_alignStart="@+id/commentsbutton"
+        android:layout_marginBottom="30dp" />
 
     <Button
         android:layout_width="wrap_content"

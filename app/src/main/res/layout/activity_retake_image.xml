@@ -52,13 +52,12 @@
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
         android:id="@+id/idfromdbtextView"
-        android:layout_alignTop="@+id/patient_id_textView"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
+        android:layout_above="@+id/imageView"
         android:layout_toRightOf="@+id/patient_id_textView"
         android:layout_toEndOf="@+id/patient_id_textView"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="19dp"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:textSize="20dp" />
+        android:layout_marginLeft="5dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -69,47 +68,53 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="Home"
         android:id="@+id/retakescanhomebutton"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorPrimary"
         android:layout_below="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/colorPrimary" />
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:textAllCaps="false"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/retakesavebutton"
+        android:textAllCaps="false"
         android:layout_alignTop="@+id/retakescanhomebutton"
-        android:layout_alignRight="@+id/patient_id_textView"
-        android:layout_alignEnd="@+id/patient_id_textView"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_toLeftOf="@+id/retakebutton"
+        android:layout_toStartOf="@+id/retakebutton"
+        android:layout_marginRight="8dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="Retake"
         android:id="@+id/retakebutton"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="false"
         android:layout_alignTop="@+id/retakesavebutton"
-        android:layout_alignLeft="@+id/idfromdbtextView"
-        android:layout_alignStart="@+id/idfromdbtextView"
-        android:textColor="@color/colorPrimary" />
+        android:layout_toLeftOf="@+id/retakebackbutton"
+        android:layout_toStartOf="@+id/retakebackbutton"
+        android:layout_marginRight="10dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="Back"
+        android:textAllCaps="false"
         android:id="@+id/retakebackbutton"
+        android:textColor="@color/colorPrimary"
         android:layout_alignTop="@+id/retakebutton"
-        android:layout_alignRight="@+id/my_toolbar"
-        android:layout_alignEnd="@+id/my_toolbar"
-        android:textColor="@color/colorPrimary" />
+        android:layout_toRightOf="@+id/idfromdbtextView"
+        android:layout_toEndOf="@+id/idfromdbtextView" />
 
 </RelativeLayout>

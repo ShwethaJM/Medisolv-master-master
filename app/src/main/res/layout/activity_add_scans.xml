@@ -52,13 +52,12 @@
         android:layout_height="wrap_content"
         android:text="&lt;ID from DB>"
         android:id="@+id/idfromdbtextView"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="20dp"
         android:layout_alignTop="@+id/patient_id_textView"
         android:layout_toRightOf="@+id/patient_id_textView"
         android:layout_toEndOf="@+id/patient_id_textView"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="19dp"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:textSize="20dp" />
+        android:layout_marginLeft="5dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -77,10 +76,11 @@
         android:text="Home"
         android:textAllCaps="false"
         android:id="@+id/addscanhomebutton"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="25dp"
         android:layout_below="@+id/scanimageview"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -99,6 +99,7 @@
         android:id="@+id/addscanbackbutton"
         android:layout_alignTop="@+id/scanbutton"
         android:layout_alignRight="@+id/my_toolbar"
-        android:layout_alignEnd="@+id/my_toolbar" />
+        android:layout_alignEnd="@+id/my_toolbar"
+        android:layout_marginRight="25dp" />
 
 </RelativeLayout>

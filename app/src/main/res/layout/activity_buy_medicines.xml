@@ -56,12 +56,13 @@
         android:textColor="@color/abc_input_method_navigation_guard"
         android:textSize="20dp"
         android:paddingLeft="10dp"
-        android:layout_alignTop="@+id/buyMedicinesPatientId"
+        android:layout_above="@+id/vendor1Button"
         android:layout_toRightOf="@+id/buyMedicinesPatientId"
-        android:layout_toEndOf="@+id/buyMedicinesPatientId" />
+        android:layout_toEndOf="@+id/buyMedicinesPatientId"
+        android:layout_marginLeft="5dp" />
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/vendor1"
         android:id="@+id/vendor1Button"
@@ -72,7 +73,7 @@
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/vendor2"
         android:id="@+id/vendor2Button"
@@ -82,7 +83,7 @@
         android:layout_marginTop="10dp"
         android:textAllCaps="false"/>
     <Button
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/vendor3"
         android:id="@+id/vendor3Button"

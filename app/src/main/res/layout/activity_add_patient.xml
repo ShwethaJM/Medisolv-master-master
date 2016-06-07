@@ -85,8 +85,8 @@
         android:layout_alignLeft="@+id/patientid_textview"
         android:layout_alignStart="@+id/patientid_textview"
         android:layout_marginTop="20dp"
-        android:layout_alignRight="@+id/databasepatientid"
-        android:layout_alignEnd="@+id/databasepatientid" />
+        android:layout_alignRight="@+id/addpatientbackbutton"
+        android:layout_alignEnd="@+id/addpatientbackbutton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -98,8 +98,8 @@
         android:layout_alignLeft="@+id/view_historybutton"
         android:layout_alignStart="@+id/view_historybutton"
         android:layout_marginTop="20dp"
-        android:layout_alignRight="@+id/databasepatientid"
-        android:layout_alignEnd="@+id/databasepatientid" />
+        android:layout_alignRight="@+id/view_historybutton"
+        android:layout_alignEnd="@+id/view_historybutton" />
 
     <Button
         android:layout_width="wrap_content"
@@ -132,8 +132,10 @@
         android:textAllCaps="false"
         android:id="@+id/addpatientbackbutton"
         android:layout_alignTop="@+id/addpatienthomebutton"
-        android:layout_alignRight="@+id/addtestscanbutton"
-        android:layout_alignEnd="@+id/addtestscanbutton" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="34dp" />
 
 
 </RelativeLayout>

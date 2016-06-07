@@ -61,7 +61,7 @@
         android:layout_toEndOf="@+id/dependentsPatientId" />
 
     <Button
-        android:layout_width="62dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/home"
         android:id="@+id/dependentHomeButton"
@@ -74,7 +74,7 @@
         android:textStyle="bold"/>
 
     <Button
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/first"
         android:id="@+id/dependentFirstButton"
@@ -82,10 +82,11 @@
         android:layout_toRightOf="@+id/dependentHomeButton"
         android:layout_toEndOf="@+id/dependentHomeButton"
         android:textAllCaps="false"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp" />
 
     <Button
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:id="@+id/dependentNextButton"
@@ -95,15 +96,16 @@
         android:textStyle="bold"/>
 
     <Button
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="@string/last"
         android:id="@+id/dependentLastButton"
-        android:layout_alignBottom="@+id/dependentFirstButton"
-        android:layout_toLeftOf="@+id/dependentBackButton"
-        android:layout_toStartOf="@+id/dependentBackButton"
         android:textAllCaps="false"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/dependentNextButton"
+        android:layout_toRightOf="@+id/dependentNextButton"
+        android:layout_toEndOf="@+id/dependentNextButton"
+        android:layout_marginLeft="5dp" />
 
     <Button
         android:layout_width="65dp"
@@ -114,99 +116,98 @@
         android:textStyle="bold"
         android:layout_alignTop="@+id/dependentLastButton"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp" />
 
     <Button
-        android:layout_width="150dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:text="@string/dependent1"
         android:id="@+id/dependent1"
         android:textAllCaps="false"
-        android:layout_marginTop="15dp"
         android:layout_below="@+id/dependentsPatientId"
-        android:layout_toLeftOf="@+id/dependentViewButton1"
-        android:layout_toStartOf="@+id/dependentViewButton1" />
+        android:layout_alignLeft="@+id/dependentsPatientId"
+        android:layout_alignStart="@+id/dependentsPatientId"
+        android:layout_marginTop="20dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view"
         android:id="@+id/dependentViewButton1"
+        android:textAllCaps="false"
         android:layout_alignTop="@+id/dependent1"
-        android:layout_toLeftOf="@+id/dependentDelButton1"
-        android:layout_toStartOf="@+id/dependentDelButton1"
-        android:textAllCaps="false"/>
+        android:layout_toRightOf="@+id/dependent1"
+        android:layout_toEndOf="@+id/dependent1" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="del"
         android:id="@+id/dependentDelButton1"
-        android:layout_alignTop="@+id/dependentViewButton1"
-        android:layout_toRightOf="@+id/dependentLastButton"
-        android:layout_toEndOf="@+id/dependentLastButton"
         android:textAllCaps="false"
-        android:onClick="OpenDetails" />
+        android:onClick="OpenDetails"
+        android:layout_above="@+id/dependentDelButton2"
+        android:layout_toRightOf="@+id/dependentViewButton1"
+        android:layout_toEndOf="@+id/dependentViewButton1" />
 
     <Button
-        android:layout_width="150dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:text="@string/dependent2"
         android:id="@+id/dependent2"
         android:textAllCaps="false"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/dependent1"
-        android:layout_toLeftOf="@+id/dependentViewButton2"
-        android:layout_toStartOf="@+id/dependentViewButton2" />
+        android:layout_alignLeft="@+id/dependent1"
+        android:layout_alignStart="@+id/dependent1" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view"
         android:id="@+id/dependentViewButton2"
-        android:layout_alignTop="@+id/dependent2"
-        android:layout_toLeftOf="@+id/dependentDelButton2"
-        android:layout_toStartOf="@+id/dependentDelButton2"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_above="@+id/dependent3"
+        android:layout_toRightOf="@+id/dependent2"
+        android:layout_toEndOf="@+id/dependent2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="del"
         android:id="@+id/dependentDelButton2"
-        android:layout_alignTop="@+id/dependentViewButton2"
-        android:layout_toRightOf="@+id/dependentLastButton"
-        android:layout_toEndOf="@+id/dependentLastButton"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:layout_above="@+id/dependentViewButton3"
+        android:layout_toRightOf="@+id/dependentViewButton2"
+        android:layout_toEndOf="@+id/dependentViewButton2" />
 
     <Button
-        android:layout_width="150dp"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:text="@string/dependent3"
         android:id="@+id/dependent3"
         android:textAllCaps="false"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/dependent2"
-        android:layout_toLeftOf="@+id/dependentViewButton3"
-        android:layout_toStartOf="@+id/dependentViewButton3" />
+        android:layout_alignLeft="@+id/dependent2"
+        android:layout_alignStart="@+id/dependent2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/view"
         android:id="@+id/dependentViewButton3"
+        android:textAllCaps="false"
         android:layout_alignTop="@+id/dependent3"
-        android:layout_toLeftOf="@+id/dependentDelButton3"
-        android:layout_toStartOf="@+id/dependentDelButton3"
-        android:textAllCaps="false"/>
+        android:layout_toRightOf="@+id/dependent3"
+        android:layout_toEndOf="@+id/dependent3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="del"
         android:id="@+id/dependentDelButton3"
+        android:textAllCaps="false"
         android:layout_alignTop="@+id/dependentViewButton3"
-        android:layout_toRightOf="@+id/dependentLastButton"
-        android:layout_toEndOf="@+id/dependentLastButton"
-        android:textAllCaps="false"/>
+        android:layout_alignLeft="@+id/dependentDelButton2"
+        android:layout_alignStart="@+id/dependentDelButton2" />
 </RelativeLayout>

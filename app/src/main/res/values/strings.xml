@@ -86,12 +86,12 @@
     <string name="del">details</string>
     <string name="dependent2">dependent2</string>
     <string name="dependent1">dependent1</string>
-    <string name="dependents">dependent</string>
-    <string name="dependentDetailComments">dependentDetailComments</string>
-    <string name="dependentDetailDoctor">dependentDetailDoctor</string>
-    <string name="dependentDetailScansOrReports">dependentDetailScansOrReports</string>
-    <string name="dependentDetailPrescriptionHistory">dependentDetailPrescriptionHistory</string>
-    <string name="dependentDetail">dependentDetail</string>
+    <string name="dependents">Dependent</string>
+    <string name="dependentDetailComments">Dependent Detail Comments</string>
+    <string name="dependentDetailDoctor">Dependent Detail Doctor</string>
+    <string name="dependentDetailScansOrReports">Dependent Detail Scans/Reports</string>
+    <string name="dependentDetailPrescriptionHistory">Dependent Detail Prescription History</string>
+    <string name="dependentDetail">Dependent Detail</string>
     <string name="logout">logout</string>
 
     <string name="consultDoctor">Consult a Doctor</string>

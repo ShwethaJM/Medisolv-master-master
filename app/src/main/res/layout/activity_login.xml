@@ -37,7 +37,8 @@
         android:hint="Mobile #"
         android:textColorHint="@color/colorPrimary"
         android:textColor="@color/colorPrimary"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:background="@drawable/broder_style" />
 
 </TableRow>
 
@@ -53,7 +54,9 @@
             android:hint="Patient ID"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
-            android:inputType="none" />
+            android:inputType="none"
+            android:background="@drawable/broder_style"
+            android:layout_marginTop="10dp" />
 
     </TableRow>
 

@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:background="#4caf50"
         android:src="@drawable/logo_3"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
