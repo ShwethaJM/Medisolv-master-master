@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class PrescribeMedicineActivity extends AppCompatActivity implements View.OnClickListener {
     Button homebutton,backbutton,addmedicine;
@@ -36,7 +35,7 @@ public class PrescribeMedicineActivity extends AppCompatActivity implements View
         }
         else if(v.getId()==R.id.prescribebackbutton)
         {
-            Intent intent = new Intent(this,AddPatientActivity.class);
+            Intent intent = new Intent(this,PatientDetailsActivity.class);
             startActivity(intent);
         }
         else if(v.getId()==R.id.addmedicinebuttons)

@@ -28,11 +28,24 @@ public class AddScansActivity extends AppCompatActivity implements View.OnClickL
 
         homebutton.setOnClickListener(this);
         backbutton.setOnClickListener(this);
-        scan.setOnClickListener(this);
+        //scan.setOnClickListener(this);
 
 }
 
-    @Override
+    public void takeImage(View view){
+        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+            Bitmap mphoto = (Bitmap) data.getExtras().get("data");
+            Intent intent = new Intent(this, RetakeImageActivity.class);
+            intent.putExtras(data);
+        }
+    }
+        @Override
     public void onClick(View v)
     {
         if(v.getId()==R.id.addscanhomebutton)
@@ -45,11 +58,11 @@ public class AddScansActivity extends AppCompatActivity implements View.OnClickL
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             startActivity(intent);
         }
-        else if(v.getId()==R.id.scanbutton)
+        /*else if(v.getId()==R.id.scanbutton)
         {
             Intent intent = new Intent(this,RetakeImageActivity.class);
             startActivity(intent);
-        }
+        }*/
 
 
     }

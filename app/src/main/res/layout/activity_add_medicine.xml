@@ -96,7 +96,7 @@
         android:layout_below="@+id/addamedicinetextview"
         android:layout_alignLeft="@+id/addamedicinetextview"
         android:layout_alignStart="@+id/addamedicinetextview"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
 
         android:layout_alignRight="@+id/addmedicinebackbutton"
         android:layout_alignEnd="@+id/addmedicinebackbutton" />
@@ -110,7 +110,7 @@
         android:layout_below="@+id/medicinenamebutton"
         android:layout_alignLeft="@+id/medicinenamebutton"
         android:layout_alignStart="@+id/medicinenamebutton"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_alignRight="@+id/medicinenamebutton"
         android:layout_alignEnd="@+id/medicinenamebutton" />
 
@@ -123,7 +123,7 @@
         android:layout_below="@+id/compositionbutton"
         android:layout_alignLeft="@+id/compositionbutton"
         android:layout_alignStart="@+id/compositionbutton"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_alignRight="@+id/compositionbutton"
         android:layout_alignEnd="@+id/compositionbutton" />
 
@@ -149,5 +149,18 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="25dp"
         android:layout_marginEnd="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:id="@+id/addMedicineSubmitButton"
+        android:layout_below="@+id/commentsbutton"
+        android:layout_alignLeft="@+id/commentsbutton"
+        android:layout_alignStart="@+id/commentsbutton"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/commentsbutton"
+        android:layout_alignEnd="@+id/commentsbutton" />
 
 </RelativeLayout>

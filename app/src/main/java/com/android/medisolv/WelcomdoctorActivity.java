@@ -49,7 +49,7 @@ public class WelcomdoctorActivity extends AppCompatActivity implements View.OnCl
         }
         else if(v.getId()==R.id.consultpatientaddpatientbutton)
         {
-            Intent intent = new Intent(this,AddPatientActivity.class);
+            Intent intent = new Intent(this,PatientDetailsActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
         }

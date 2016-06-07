@@ -7,42 +7,33 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Permission to use camera and save the captured image-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/medico_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
-            android:label="">
+            android:name=".SplashActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="" />
-        <activity
-            android:name=".RegistrationActivity"
-            android:label="" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="" />
-        <activity
-            android:name=".WelcomeActivity"
-            android:label="" />
-        <activity
-            android:name=".WelcomdoctorActivity"
-            android:label="" />
-        <activity
-            android:name=".ViewHistoryActivity"
-            android:label="" />
-        <activity
-            android:name=".ViewReportsOrScansActivity"
-            android:label="" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".WelcomdoctorActivity"/>
+        <activity android:name=".ViewHistoryActivity"/>
+        <activity android:name=".ViewReportsOrScansActivity"/>
         <activity android:name=".ReportsOrScansActivity" />
         <activity android:name=".ShareReportsOrScansActivity" />
         <activity android:name=".PriscriptionActivity" />
@@ -51,7 +42,7 @@
         <activity android:name=".ConsultapatientActivity" />
         <activity android:name=".ConsultDoctorActivity" />
         <activity android:name=".ForgotPatientIDActivity" />
-        <activity android:name=".AddPatientActivity" />
+        <activity android:name=".PatientDetailsActivity" />
         <activity android:name=".AddScansActivity" />
         <activity android:name=".AddMedicineActivity" />
         <activity android:name=".PrescribeMedicineActivity" />

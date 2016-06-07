@@ -35,7 +35,7 @@ public class AddMedicineActivity extends AppCompatActivity implements View.OnCli
         }
         else if(v.getId()==R.id.addmedicinebackbutton)
         {
-            Intent intent = new Intent(this,AddPatientActivity.class);
+            Intent intent = new Intent(this,PatientDetailsActivity.class);
             startActivity(intent);
         }
     }

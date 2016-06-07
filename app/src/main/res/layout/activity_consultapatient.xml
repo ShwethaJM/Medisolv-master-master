@@ -124,12 +124,24 @@
         android:text="Add Patient"
         android:textAllCaps="false"
         android:id="@+id/consultpatientaddpatientbutton"
+        android:textColor="@color/colorPrimary"
+        android:layout_above="@+id/consultpatienthomebutton"
+        android:layout_alignLeft="@+id/consultpatienthomebutton"
+        android:layout_alignStart="@+id/consultpatienthomebutton"
+        android:layout_alignRight="@+id/consultpagebackbutton"
+        android:layout_alignEnd="@+id/consultpagebackbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:id="@+id/consultPatientSubmitButton"
         android:layout_below="@+id/consultpatientname"
         android:layout_alignLeft="@+id/consultpatientname"
         android:layout_alignStart="@+id/consultpatientname"
-        android:layout_marginTop="50dp"
-        android:layout_alignRight="@+id/consultpagebackbutton"
-        android:layout_alignEnd="@+id/consultpagebackbutton"
-        android:textColor="@color/colorPrimary" />
+        android:layout_alignRight="@+id/consultpatientname"
+        android:layout_alignEnd="@+id/consultpatientname"
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>

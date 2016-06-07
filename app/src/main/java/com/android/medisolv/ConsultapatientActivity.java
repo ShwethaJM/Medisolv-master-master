@@ -64,7 +64,7 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
                 Toast.makeText(ConsultapatientActivity.this, "Please enter all the values.", Toast.LENGTH_LONG).show();
             }else {
 
-                Intent intent = new Intent(this, AddPatientActivity.class);
+                Intent intent = new Intent(this, PatientDetailsActivity.class);
                 intent.putExtras(bundle);
                 intent.putExtra("PatientId",patientID);
                 startActivity(intent);

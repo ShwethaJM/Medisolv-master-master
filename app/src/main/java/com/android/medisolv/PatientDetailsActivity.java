@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class AddPatientActivity extends AppCompatActivity implements View.OnClickListener {
+public class PatientDetailsActivity extends AppCompatActivity implements View.OnClickListener {
     Button home,back,history,prescribe,testorscan;
     Bundle bundle;
     String patient_id,doctor_id;
@@ -16,7 +16,7 @@ public class AddPatientActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_patient);
+        setContentView(R.layout.activity_patient_details);
 
         bundle= getIntent().getExtras();
         patient_id = bundle.getString("PatientId");

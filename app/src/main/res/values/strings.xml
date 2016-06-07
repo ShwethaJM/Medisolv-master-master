@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Medisolv</string>
+    <string name="app_name">Medicosolv</string>
     <string name="splashText">Your Medical Partner!</string>
     <string name="login">Login</string>
     <string name="register">Sign Up</string>
