@@ -54,9 +54,9 @@
             android:hint="Patient ID"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
-            android:inputType="none"
             android:background="@drawable/broder_style"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:inputType="number" />
 
     </TableRow>
 

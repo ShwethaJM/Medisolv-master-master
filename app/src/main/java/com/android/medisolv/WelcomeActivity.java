@@ -11,7 +11,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
 
     String patient_id;
     String patient_name;
-    Button viewhistory;
+    Button viewhistory,consultDoctor,addDependent,logout;
     Button viewPrescription;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,13 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         viewPrescription=(Button)findViewById(R.id.viewprescription);
         viewPrescription.setOnClickListener(this);
 
+        consultDoctor = (Button)findViewById(R.id.consultdoctor);
+        addDependent = (Button)findViewById(R.id.adddependent);
+        logout = (Button)findViewById(R.id.logoutbutton);
+        consultDoctor.setOnClickListener(this);
+        addDependent.setOnClickListener(this);
+        logout.setOnClickListener(this);
+
     }
 
     /*Method to Redirect to corresponding page based on which button has clicked in the page*/
@@ -53,6 +60,24 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             intent = new Intent(this, PriscriptionActivity.class);
             intent.putExtra("name",patient_name);
             intent.putExtra("id",patient_id);
+            startActivity(intent);
+        }
+
+        else if (v.getId() == R.id.consultdoctor)
+        {
+            intent = new Intent(this, ConsultDoctorActivity.class);
+            intent.putExtra("name",patient_name);
+            intent.putExtra("id",patient_id);
+            startActivity(intent);
+        }
+        else if (v.getId() == R.id.adddependent) {
+            intent = new Intent(this, ConsultDoctorActivity.class);
+            intent.putExtra("name",patient_name);
+            intent.putExtra("id",patient_id);
+            startActivity(intent);
+        }
+        else if (v.getId() == R.id.logoutbutton) {
+            intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
     }

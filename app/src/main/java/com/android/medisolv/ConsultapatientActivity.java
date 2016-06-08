@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ConsultapatientActivity extends AppCompatActivity implements View.OnClickListener {
-    Button home,back,addpatient;
+    Button home,back,addpatient,submit;
     EditText patient_id,patient_name;
     String patientID,patientName;
     TextView doctorId;
@@ -38,6 +38,9 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
         addpatient=(Button)findViewById(R.id.consultpatientaddpatientbutton);
         addpatient.setOnClickListener(this);
 
+        submit=(Button)findViewById(R.id.consultPatientSubmitButton);
+        submit.setOnClickListener(this);
+
     }
 
     @Override
@@ -55,7 +58,7 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
             intent.putExtras(bundle);
             startActivity(intent);
         }
-        else if(v.getId()==R.id.consultpatientaddpatientbutton)
+        else if(v.getId()==R.id.consultPatientSubmitButton)
         {
             patientID = patient_id.getText().toString().trim();
             patientName = patient_name.getText().toString().trim();
@@ -63,12 +66,16 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
             if(patientID.equals("")&& patientName.equals("")){
                 Toast.makeText(ConsultapatientActivity.this, "Please enter all the values.", Toast.LENGTH_LONG).show();
             }else {
-
+                /*need to add code to validate entered patient id and name in DB or not*/
                 Intent intent = new Intent(this, PatientDetailsActivity.class);
                 intent.putExtras(bundle);
                 intent.putExtra("PatientId",patientID);
                 startActivity(intent);
             }
+        }
+        else if(v.getId()==R.id.consultpatientaddpatientbutton)
+        {
+            /*Code to redirect to Adda a patient screen*/
         }
 
     }

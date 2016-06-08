@@ -27,15 +27,15 @@
         android:layout_height="wrap_content"
         android:text="@string/patiendId"
         android:id="@+id/consultDoctorPatientIdtextView"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/my_toolbar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="62dp"
-        android:layout_marginStart="62dp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,8 +69,59 @@
         android:textAllCaps="false"
         android:id="@+id/consultDoctorbackbutton"
         android:layout_alignTop="@+id/consultDoctorhomebutton"
+        android:layout_alignRight="@+id/my_toolbar"
+        android:layout_alignEnd="@+id/my_toolbar"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comments"
+        android:id="@+id/consultDoctorComments"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/consultDoctorPatientNametextView"
+        android:layout_alignLeft="@+id/consultDoctorPatientNametextView"
+        android:layout_alignStart="@+id/consultDoctorPatientNametextView"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Id from DB"
+        android:id="@+id/consultDoctorPatientIDValue"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_alignTop="@+id/consultDoctorPatientIdtextView"
+        android:layout_toRightOf="@+id/consultDoctorPatientIdtextView"
+        android:layout_toEndOf="@+id/consultDoctorPatientIdtextView"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/consultDoctorPatientNameValue"
+        android:textSize="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_alignTop="@+id/consultDoctorPatientNametextView"
         android:layout_toRightOf="@+id/consultDoctorPatientNametextView"
-        android:layout_toEndOf="@+id/consultDoctorPatientNametextView" />
+        android:layout_toEndOf="@+id/consultDoctorPatientNametextView"
+        android:layout_marginLeft="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/consultDoctorComment"
+        android:layout_below="@+id/consultDoctorComments"
+        android:layout_alignLeft="@+id/consultDoctorComments"
+        android:layout_alignStart="@+id/consultDoctorComments"
+        android:layout_alignRight="@+id/consultDoctorbackbutton"
+        android:layout_alignEnd="@+id/consultDoctorbackbutton"
+        android:background="@drawable/broder_style" />
 
 
 </RelativeLayout>

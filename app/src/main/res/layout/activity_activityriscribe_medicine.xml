@@ -93,10 +93,10 @@
         android:text="Home"
         android:textAllCaps="false"
         android:id="@+id/prescribehomebutton"
-        android:layout_marginBottom="26dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/addmedicinebuttons"
-        android:layout_alignStart="@+id/addmedicinebuttons" />
+        android:layout_alignLeft="@+id/addMedicineSubmitButton"
+        android:layout_alignStart="@+id/addMedicineSubmitButton"
+        android:layout_marginBottom="30dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -129,13 +129,26 @@
         android:layout_height="wrap_content"
         android:text="Add Medicine"
         android:textAllCaps="false"
-        android:id="@+id/addmedicinebuttons"
+        android:id="@+id/addMedicineButton"
+        android:layout_below="@+id/addMedicineSubmitButton"
+        android:layout_alignRight="@+id/addMedicineSubmitButton"
+        android:layout_alignEnd="@+id/addMedicineSubmitButton"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/addMedicineSubmitButton"
+        android:layout_alignStart="@+id/addMedicineSubmitButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:id="@+id/addMedicineSubmitButton"
         android:layout_below="@+id/medicinenameTextView"
         android:layout_alignLeft="@+id/medicinenameTextView"
         android:layout_alignStart="@+id/medicinenameTextView"
-        android:layout_alignRight="@+id/prescribebackbutton"
-        android:layout_alignEnd="@+id/prescribebackbutton"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/medicinenameTextView"
+        android:layout_alignEnd="@+id/medicinenameTextView" />
 
 
 </RelativeLayout>

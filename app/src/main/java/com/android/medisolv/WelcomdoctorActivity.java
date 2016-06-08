@@ -49,20 +49,23 @@ public class WelcomdoctorActivity extends AppCompatActivity implements View.OnCl
         }
         else if(v.getId()==R.id.consultpatientaddpatientbutton)
         {
-            Intent intent = new Intent(this,PatientDetailsActivity.class);
+            /*Code to redirect to Adda a patient screen*/
+            /*Intent intent = new Intent(this,PatientDetailsActivity.class);
             intent.putExtras(bundle);
-            startActivity(intent);
+            startActivity(intent);*/
         }
         else if(v.getId()==R.id.addamedicinebutton)
         {
             Intent intent = new Intent(this,AddMedicineActivity.class);
             intent.putExtras(bundle);
+            intent.putExtra("PatientId","");
             startActivity(intent);
         }
         else if(v.getId()==R.id.addscanbutton)
         {
             Intent intent = new Intent(this,AddScansActivity.class);
             intent.putExtras(bundle);
+            intent.putExtra("PatientId","");
             startActivity(intent);
         }
     }

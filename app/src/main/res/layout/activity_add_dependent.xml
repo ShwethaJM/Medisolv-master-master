@@ -25,28 +25,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome  Mr/Mrs. "
-        android:id="@+id/welcometextview"
-        android:layout_below="@+id/my_toolbar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="60dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:textSize="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Patient ID : "
         android:id="@+id/adddependentpatientid"
-        android:layout_below="@+id/welcometextview"
-        android:layout_alignLeft="@+id/welcometextview"
-        android:layout_alignStart="@+id/welcometextview"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:textSize="20dp"
-        android:textColor="@color/abc_input_method_navigation_guard" />
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignLeft="@+id/adddependentbutton"
+        android:layout_alignStart="@+id/adddependentbutton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -61,18 +47,14 @@
         android:layout_marginLeft="5dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Add Dependent"
         android:textAllCaps="false"
         android:id="@+id/adddependentbutton"
-        android:layout_below="@+id/adddependentpatientid"
-        android:layout_alignLeft="@+id/adddependentpatientid"
-        android:layout_alignStart="@+id/adddependentpatientid"
-        android:layout_marginTop="30dp"
-        android:layout_alignRight="@+id/my_toolbar"
-        android:layout_alignEnd="@+id/my_toolbar"
-        android:layout_marginRight="30dp" />
+        android:layout_below="@+id/adddependentidfromdb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -82,8 +64,7 @@
         android:textSize="15dp"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/adddependentbutton"
-        android:layout_alignRight="@+id/welcometextview"
-        android:layout_alignEnd="@+id/welcometextview" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -103,24 +84,21 @@
         android:layout_height="wrap_content"
         android:text="New user"
         android:id="@+id/adddependentnewuser"
-        android:layout_below="@+id/registerdependentbutton"
-        android:layout_alignLeft="@+id/adddependentreguser"
-        android:layout_alignStart="@+id/adddependentreguser"
         android:textSize="15dp"
-        android:textColor="@color/abc_input_method_navigation_guard" />
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/registerdependentbutton"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Home"
         android:textAllCaps="false"
         android:id="@+id/dependenthomebutton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/adddependentnewuser"
-        android:layout_alignStart="@+id/adddependentnewuser"
         android:layout_marginBottom="50dp"
-        android:layout_alignRight="@+id/adddependentreguser"
-        android:layout_alignEnd="@+id/adddependentreguser" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/registerdependentbutton"
+        android:layout_alignStart="@+id/registerdependentbutton" />
 
 
 </RelativeLayout>

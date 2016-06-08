@@ -5,13 +5,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class RegistredDependentActivity extends AppCompatActivity implements View.OnClickListener {
-Button homebutton,backbutton,submitbutton;
+
+    Button homebutton,backbutton,submitbutton;
+    Bundle bundle;
+    TextView patientId;
+    String patientIdValue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registred_dependent);
+
+        bundle = getIntent().getExtras();
+        patientIdValue=bundle.getString("id");
+        patientId = (TextView)findViewById(R.id.databasedependentid);
+        patientId.setText(patientIdValue.trim());
 
         homebutton=(Button)findViewById(R.id.registeredhomebutton);
         backbutton=(Button)findViewById(R.id.regdepbackbutton);
@@ -28,15 +38,18 @@ Button homebutton,backbutton,submitbutton;
         if(v.getId()==R.id.registeredhomebutton)
         {
             Intent intent = new Intent(this,WelcomeActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putString("PatientID", "Dummy");
             intent.putExtras(bundle);
             startActivity(intent);
         }
         else if(v.getId()==R.id.regdepbackbutton)
         {
             Intent intent = new Intent(this,AddDependentActivity.class);
+            intent.putExtras(bundle);
             startActivity(intent);
+        }
+        else if(v.getId()==R.id.regdepsubmitbutton)
+        {
+            /*Code to save*/
         }
     }
 }

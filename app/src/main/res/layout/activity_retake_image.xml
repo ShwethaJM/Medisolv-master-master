@@ -69,7 +69,7 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="Home"
         android:id="@+id/retakescanhomebutton"
@@ -82,41 +82,43 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="Save"
         android:id="@+id/retakesavebutton"
         android:textAllCaps="false"
-        android:layout_alignTop="@+id/retakescanhomebutton"
         android:textColor="@color/colorPrimary"
-        android:layout_toLeftOf="@+id/retakebutton"
-        android:layout_toStartOf="@+id/retakebutton"
-        android:layout_marginRight="8dp" />
+        android:layout_alignTop="@+id/retakescanhomebutton"
+        android:layout_toRightOf="@+id/retakescanhomebutton"
+        android:layout_toEndOf="@+id/retakescanhomebutton"
+        android:layout_marginLeft="5dp"
+        android:onClick="saveScannedImage"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="Retake"
         android:id="@+id/retakebutton"
         android:textColor="@color/colorPrimary"
         android:textAllCaps="false"
+        android:onClick="retakeImage"
         android:layout_alignTop="@+id/retakesavebutton"
-        android:layout_toLeftOf="@+id/retakebackbutton"
-        android:layout_toStartOf="@+id/retakebackbutton"
-        android:layout_marginRight="10dp"
-        android:onClick="retakeImage" />
+        android:layout_toRightOf="@+id/retakesavebutton"
+        android:layout_toEndOf="@+id/retakesavebutton"
+        android:layout_marginLeft="5dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="Back"
         android:textAllCaps="false"
         android:id="@+id/retakebackbutton"
         android:textColor="@color/colorPrimary"
         android:layout_alignTop="@+id/retakebutton"
-        android:layout_toRightOf="@+id/idfromdbtextView"
-        android:layout_toEndOf="@+id/idfromdbtextView" />
+        android:layout_toRightOf="@+id/retakebutton"
+        android:layout_toEndOf="@+id/retakebutton"
+        android:layout_marginLeft="5dp" />
 
 </RelativeLayout>
