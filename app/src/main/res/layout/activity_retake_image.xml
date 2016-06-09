@@ -96,7 +96,7 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="70dp"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="Retake"
         android:id="@+id/retakebutton"

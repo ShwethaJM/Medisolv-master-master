@@ -153,7 +153,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
 
                 String enteredLastName = lastName.getText().toString();
 
-                String name = enteredFirstName + enteredLastName;
+                String name = enteredFirstName +" "+ enteredLastName;
 
                 String enteredEmail = email.getText().toString().trim();
 
@@ -411,6 +411,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            finish();
                             // This method will be executed once the timer is over
                             Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
 

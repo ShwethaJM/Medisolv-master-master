@@ -87,25 +87,28 @@
         android:layout_alignStart="@+id/patientid_textview"
         android:layout_marginTop="20dp" />
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medicine Name"
-        android:textAllCaps="false"
+        android:hint="Medicine Name"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/broder_style"
         android:id="@+id/medicinenamebutton"
         android:layout_below="@+id/addamedicinetextview"
         android:layout_alignLeft="@+id/addamedicinetextview"
         android:layout_alignStart="@+id/addamedicinetextview"
         android:layout_marginTop="10dp"
-
         android:layout_alignRight="@+id/addmedicinebackbutton"
         android:layout_alignEnd="@+id/addmedicinebackbutton" />
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Composition"
-        android:textAllCaps="false"
+        android:hint="Composition"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/broder_style"
         android:id="@+id/compositionbutton"
         android:layout_below="@+id/medicinenamebutton"
         android:layout_alignLeft="@+id/medicinenamebutton"
@@ -114,11 +117,13 @@
         android:layout_alignRight="@+id/medicinenamebutton"
         android:layout_alignEnd="@+id/medicinenamebutton" />
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comments"
-        android:textAllCaps="false"
+        android:hint="Comments"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:background="@drawable/broder_style"
         android:id="@+id/commentsbutton"
         android:layout_below="@+id/compositionbutton"
         android:layout_alignLeft="@+id/compositionbutton"

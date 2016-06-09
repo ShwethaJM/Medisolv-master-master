@@ -97,7 +97,7 @@ public class DependentRegisterActivity extends ActionBarActivity implements Adap
 
                 String enteredLastName = lastName.getText().toString();
 
-                String name = enteredFirstName + enteredLastName;
+                String name = enteredFirstName +" "+ enteredLastName;
 
                 String enteredEmail = email.getText().toString();
 
@@ -274,6 +274,8 @@ public class DependentRegisterActivity extends ActionBarActivity implements Adap
 
             return jsonResult;
         }
+
+
 
         @Override
         protected void onPostExecute(String result) {

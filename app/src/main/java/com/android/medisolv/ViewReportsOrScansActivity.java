@@ -1,5 +1,7 @@
 package com.android.medisolv;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,6 +38,7 @@ public class ViewReportsOrScansActivity extends AppCompatActivity implements Vie
         share = (Button)findViewById(R.id.viewReportShareButton);
         share.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
