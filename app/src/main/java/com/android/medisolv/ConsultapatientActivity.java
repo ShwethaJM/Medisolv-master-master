@@ -55,10 +55,11 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
+
                 Intent intent = new Intent(ConsultapatientActivity.this,WelcomdoctorActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -80,12 +81,14 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.consultpagebackbutton)
         {
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.consultPatientSubmitButton)
         {
@@ -100,6 +103,7 @@ public class ConsultapatientActivity extends AppCompatActivity implements View.O
                 intent.putExtras(bundle);
                 intent.putExtra("PatientId",patientID);
                 startActivity(intent);
+                finish();
             }
         }
         else if(v.getId()==R.id.consultpatientaddpatientbutton)

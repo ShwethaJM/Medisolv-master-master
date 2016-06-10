@@ -43,10 +43,10 @@ public class ViewHistoryActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(ViewHistoryActivity.this,WelcomeActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -67,12 +67,14 @@ public class ViewHistoryActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.backbutton)
         {
             Intent intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
     }
 
@@ -80,11 +82,13 @@ public class ViewHistoryActivity extends AppCompatActivity implements View.OnCli
         Intent intent = new Intent(this,ReportsOrScansActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+        finish();
     }
 
     public void openPrescriptionActivity(View view){
         Intent intent = new Intent(this,PriscriptionActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+        finish();
     }
 }

@@ -46,16 +46,19 @@ public class PrescriptionDetailActivity extends AppCompatActivity implements Vie
             intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }else  if(view.getId() == R.id.prescriptionDetailBuyButton){
             intent = new Intent(this,BuyMedicinesActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(view.getId() == R.id.prescriptionDetailBackButton){
             System.out.println("View Report Back button clicked");
             intent = new Intent(this,ViewHistoryActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
     }

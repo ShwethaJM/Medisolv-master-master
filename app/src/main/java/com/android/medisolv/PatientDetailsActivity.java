@@ -52,10 +52,10 @@ public class PatientDetailsActivity extends AppCompatActivity implements View.On
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(PatientDetailsActivity.this,ConsultapatientActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -76,30 +76,35 @@ public class PatientDetailsActivity extends AppCompatActivity implements View.On
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.addpatientbackbutton)
         {
             Intent intent = new Intent(this,ConsultapatientActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.view_historybutton)
         {
             Intent intent = new Intent(this,ViewHistoryActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.priscribebutton)
         {
             Intent intent = new Intent(this,PrescribeMedicineActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.addtestscanbutton)
         {
             Intent intent = new Intent(this,AddScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
     }

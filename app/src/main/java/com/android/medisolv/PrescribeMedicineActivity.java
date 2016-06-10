@@ -46,12 +46,14 @@ public class PrescribeMedicineActivity extends AppCompatActivity implements View
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.prescribebackbutton)
         {
             Intent intent = new Intent(this,PatientDetailsActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()== R.id.addMedicineSubmitButton){
 
@@ -62,6 +64,7 @@ public class PrescribeMedicineActivity extends AppCompatActivity implements View
             Intent intent = new Intent(this,AddMedicineActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
     }

@@ -43,10 +43,12 @@ public class BuyMedicinesActivity extends AppCompatActivity implements View.OnCl
             intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }else  if(view.getId() == R.id.buyMedicinesBackButton){
             intent = new Intent(this,PrescriptionDetailActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
     }
 }

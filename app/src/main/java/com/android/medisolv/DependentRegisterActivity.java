@@ -316,6 +316,7 @@ public class DependentRegisterActivity extends ActionBarActivity implements Adap
                             intent.putExtra("MESSAGE", "You have been successfully registered, Kindly Login");
 
                             startActivity(intent);
+                            finish();
                         }
                     },DELAY_TIME_OUT);
 

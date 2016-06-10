@@ -101,6 +101,7 @@ public class LoginActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this,ForgotPatientIDActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -155,9 +156,10 @@ public class LoginActivity extends ActionBarActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //if user pressed "yes", then he is allowed to exit from application
-                        finish();
+
                         Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                         startActivity(intent);
+                        finish();
                     }
                 });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -276,6 +278,7 @@ public class LoginActivity extends ActionBarActivity {
                         intent.putExtra("MESSAGE", "You have been successfully login");
 
                         startActivity(intent);
+                        finish();
 
                     }else{
                         System.out.println("Going to Patient Screen");
@@ -288,6 +291,7 @@ public class LoginActivity extends ActionBarActivity {
                         intent.putExtra("MESSAGE", "You have been successfully login");
 
                         startActivity(intent);
+                        finish();
 
                     }
 

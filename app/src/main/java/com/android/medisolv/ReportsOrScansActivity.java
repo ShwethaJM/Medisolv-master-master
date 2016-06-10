@@ -58,10 +58,10 @@ public class ReportsOrScansActivity extends AppCompatActivity implements View.On
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(ReportsOrScansActivity.this,WelcomeActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -82,15 +82,18 @@ public class ReportsOrScansActivity extends AppCompatActivity implements View.On
          intent = new Intent(this,ViewReportsOrScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }else if(view.getId() == R.id.shareButton1){
            intent = new Intent(this,ShareReportsOrScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(view.getId() == R.id.reportHomeButton){
             intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
          /*Redirecting to Back page when Back button has clicked*/
@@ -98,6 +101,7 @@ public class ReportsOrScansActivity extends AppCompatActivity implements View.On
             intent = new Intent(this,ViewHistoryActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
     }

@@ -47,10 +47,11 @@ public class PriscriptionActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
+
                 Intent intent = new Intent(PriscriptionActivity.this,WelcomeActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -72,12 +73,13 @@ public class PriscriptionActivity extends AppCompatActivity implements View.OnCl
             intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(view.getId() == R.id.drug1){}
         System.out.println("Priscription Detail button");
         intent = new Intent(this,PrescriptionDetailActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
-
+        finish();
     }
 }

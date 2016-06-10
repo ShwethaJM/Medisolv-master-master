@@ -48,16 +48,19 @@ public class ViewReportsOrScansActivity extends AppCompatActivity implements Vie
             intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }else  if(view.getId() == R.id.viewReportShareButton){
             intent = new Intent(this,ShareReportsOrScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(view.getId() == R.id.viewReportBackButton){
             System.out.println("View Report Back button clicked");
             intent = new Intent(this,ReportsOrScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
     }
 }

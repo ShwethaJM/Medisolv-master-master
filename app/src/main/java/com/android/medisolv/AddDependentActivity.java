@@ -45,10 +45,11 @@ public class AddDependentActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
+
                 Intent intent = new Intent(AddDependentActivity.this,WelcomeActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -69,17 +70,20 @@ public class AddDependentActivity extends AppCompatActivity implements View.OnCl
             Intent intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.adddependentbutton)
         {
             Intent intent = new Intent(this,RegistredDependentActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.registerdependentbutton)
         {
             Intent intent = new Intent(this,DependentRegisterActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }

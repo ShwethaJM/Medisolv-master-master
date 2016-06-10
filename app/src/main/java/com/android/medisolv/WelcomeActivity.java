@@ -56,9 +56,9 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -82,6 +82,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             intent.putExtra("name",patient_name);
             intent.putExtra("id",patient_id);
             startActivity(intent);
+            finish();
         }
          /*Redirecting to ViewPrescription page when ViewPrescription button has clicked*/
         else if (v.getId() == R.id.viewprescription) {
@@ -89,6 +90,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             intent.putExtra("name",patient_name);
             intent.putExtra("id",patient_id);
             startActivity(intent);
+            finish();
         }
 
         else if (v.getId() == R.id.consultdoctor)
@@ -97,16 +99,19 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             intent.putExtra("name",patient_name);
             intent.putExtra("id",patient_id);
             startActivity(intent);
+            finish();
         }
         else if (v.getId() == R.id.adddependent) {
             intent = new Intent(this, ConsultDoctorActivity.class);
             intent.putExtra("name",patient_name);
             intent.putExtra("id",patient_id);
             startActivity(intent);
+            finish();
         }
         else if (v.getId() == R.id.logoutbutton) {
             intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }

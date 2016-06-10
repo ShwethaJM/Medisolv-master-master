@@ -48,10 +48,10 @@ public class AddMedicineActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(AddMedicineActivity.this,WelcomdoctorActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -73,12 +73,16 @@ public class AddMedicineActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
+
         }
         else if(v.getId()==R.id.addmedicinebackbutton)
         {
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
+
         }
     }
 }

@@ -420,6 +420,7 @@ public class RegistrationActivity extends ActionBarActivity implements AdapterVi
                             intent.putExtra("MESSAGE", "You have been successfully registered, Kindly Login");
 
                             startActivity(intent);
+                            finish();
                         }
                     },DELAY_TIME_OUT);
 

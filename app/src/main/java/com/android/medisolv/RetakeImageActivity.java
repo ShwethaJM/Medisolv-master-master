@@ -75,24 +75,30 @@ public class RetakeImageActivity extends AppCompatActivity implements View.OnCli
 
     public void saveScannedImage(View view){
         /*Code to save the image (mphoto)*/
+        Toast.makeText(RetakeImageActivity.this, "Your Image is saving...", Toast.LENGTH_LONG).show();
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "IMG_" + timeStamp;
-        File storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES);
+        String imageFileName = "IMG_" + timeStamp+".jpg";
+        String filePath = Environment.getExternalStorageDirectory().getAbsolutePath()+"/Medicosolv";
+        File storageDir =new File(filePath);
+        if(!storageDir.exists()){
+            storageDir.mkdir();
+            Toast.makeText(RetakeImageActivity.this, "Directory got created", Toast.LENGTH_LONG).show();
+        }
 
         try {
-            File image = File.createTempFile(imageFileName, ".jpg", storageDir);
+            File image = new File(storageDir, imageFileName);
             FileOutputStream out = new FileOutputStream(image);
-            mphoto.compress(Bitmap.CompressFormat.JPEG, 90, out);
+            mphoto.compress(Bitmap.CompressFormat.JPEG, 85, out);
             out.flush();
             out.close();
-            Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            /*Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
             Uri contentUri = Uri.fromFile(image);
             mediaScanIntent.setData(contentUri);
-            getApplicationContext().sendBroadcast(mediaScanIntent);
+            getApplicationContext().sendBroadcast(mediaScanIntent);*/
             Toast.makeText(RetakeImageActivity.this, "Your Image saved successfully.", Toast.LENGTH_LONG).show();
 
         } catch (Exception e) {
+            Toast.makeText(RetakeImageActivity.this,e.getMessage(), Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }
@@ -105,12 +111,14 @@ public class RetakeImageActivity extends AppCompatActivity implements View.OnCli
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.retakebackbutton)
         {
             Intent intent = new Intent(this,AddScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
 
     }

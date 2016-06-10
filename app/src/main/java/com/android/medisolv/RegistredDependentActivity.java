@@ -44,10 +44,10 @@ public class RegistredDependentActivity extends AppCompatActivity implements Vie
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(RegistredDependentActivity.this,WelcomeActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -68,12 +68,14 @@ public class RegistredDependentActivity extends AppCompatActivity implements Vie
             Intent intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.regdepbackbutton)
         {
             Intent intent = new Intent(this,AddDependentActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.regdepsubmitbutton)
         {

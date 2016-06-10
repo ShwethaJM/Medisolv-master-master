@@ -39,12 +39,14 @@ public class ShareReportsOrScansActivity extends AppCompatActivity implements Vi
             Intent intent = new Intent(this,WelcomeActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(view.getId() == R.id.shareReportBackButton){
             System.out.println("View Report Back button clicked");
             Intent intent = new Intent(this,ReportsOrScansActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
     }
 }

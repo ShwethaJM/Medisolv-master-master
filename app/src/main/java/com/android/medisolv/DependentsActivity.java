@@ -18,6 +18,7 @@ public class DependentsActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this,DependentsDetailActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override

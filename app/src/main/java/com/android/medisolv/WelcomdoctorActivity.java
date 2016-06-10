@@ -48,13 +48,15 @@ public class WelcomdoctorActivity extends AppCompatActivity implements View.OnCl
             Intent intent = new Intent(this,ConsultapatientActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.consultpatientaddpatientbutton)
         {
             /*Code to redirect to Adda a patient screen*/
             /*Intent intent = new Intent(this,PatientDetailsActivity.class);
             intent.putExtras(bundle);
-            startActivity(intent);*/
+            startActivity(intent);
+            finish();*/
         }
         else if(v.getId()==R.id.addamedicinebutton)
         {
@@ -62,6 +64,7 @@ public class WelcomdoctorActivity extends AppCompatActivity implements View.OnCl
             intent.putExtras(bundle);
             intent.putExtra("PatientId","");
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.addscanbutton)
         {
@@ -69,6 +72,7 @@ public class WelcomdoctorActivity extends AppCompatActivity implements View.OnCl
             intent.putExtras(bundle);
             intent.putExtra("PatientId","");
             startActivity(intent);
+            finish();
         }
     }
     @Override
@@ -81,9 +85,9 @@ public class WelcomdoctorActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
                 Intent intent = new Intent(WelcomdoctorActivity.this,LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {

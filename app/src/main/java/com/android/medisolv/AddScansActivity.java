@@ -67,10 +67,11 @@ public class AddScansActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //if user pressed "yes", then he is allowed to exit from application
-                finish();
+
                 Intent intent = new Intent(AddScansActivity.this,WelcomdoctorActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -97,6 +98,7 @@ public class AddScansActivity extends AppCompatActivity implements View.OnClickL
             intent.putExtras(data);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
     }
         @Override
@@ -107,17 +109,20 @@ public class AddScansActivity extends AppCompatActivity implements View.OnClickL
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         else if(v.getId()==R.id.addscanbackbutton)
         {
             Intent intent = new Intent(this,WelcomdoctorActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
+            finish();
         }
         /*else if(v.getId()==R.id.scanbutton)
         {
             Intent intent = new Intent(this,RetakeImageActivity.class);
             startActivity(intent);
+            finish();
         }*/
 
 
